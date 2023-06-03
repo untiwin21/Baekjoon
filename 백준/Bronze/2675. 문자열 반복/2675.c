@@ -14,14 +14,14 @@ int main(){
 	scanf("%d", &test_num);
 	
 	int rpt[test_num];	//각 케이스마다 반복횟수
-	char test_case[test_num][21];
+	char test_case[test_num][21];	//문자열을 저장할 배열
 	for(int i=0; i<test_num; i++){
-		scanf("%d %s",&rpt[i], &test_case[i]);
+		scanf("%d %s",&rpt[i], &test_case[i]);	//반복 횟수, 반복 대상 문자열 입력받기
 	}
 	
-	for(int i=0; i<test_num; i++){
-		for(int j=0; test_case[i][j]!='\0'; j++){
-			for(int k=0; k<rpt[i]; k++){
+	for(int i=0; i<test_num; i++){	//각각의 테스트 케이스를 기준으로 나누기
+		for(int j=0; test_case[i][j]!='\0'; j++){	//문자열이 끝날 때까지 각 문자를 반복해서 출력
+			for(int k=0; k<rpt[i]; k++){	//주어진 횟수만큼 각각의 문자를 반복
 				printf("%c", test_case[i][j]);
 			}
 		}
