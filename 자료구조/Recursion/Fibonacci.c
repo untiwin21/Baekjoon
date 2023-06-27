@@ -12,6 +12,7 @@ int fibonacci(int n){
 int main(){
 	int n;
 	scanf("%d", &n);
-	printf("%d", fibonacci(n));
+	for(int i=1; i<=n; i++)
+		printf("%d ", fibonacci(i));
 	return 0;
 }
